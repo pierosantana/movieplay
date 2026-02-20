@@ -1,0 +1,71 @@
+# ==============================
+# Build tools
+# ==============================
+.gradle/
+build/
+out/
+target/
+
+!gradle/wrapper/gradle-wrapper.jar
+
+# Logs
+*.log
+
+# ==============================
+# IntelliJ IDEA
+# ==============================
+.idea/
+*.iml
+*.ipr
+*.iws
+HELP.md
+
+# ==============================
+# Eclipse / STS
+# ==============================
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+bin/
+
+# ==============================
+# NetBeans
+# ==============================
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ==============================
+# VS Code
+# ==============================
+.vscode/
+
+# ==============================
+# OS generated files
+# ==============================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ==============================
+# Environment & secrets
+# ==============================
+.env
+.env.*
+*.local
+application-local.yml
+application-local.properties
+
+# ==============================
+# Temporary files
+# ==============================
+*.swp
+*.swo
+*~
