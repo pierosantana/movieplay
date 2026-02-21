@@ -1,4 +1,4 @@
-package com.psantana.movieplay;
+package com.psantana.movieplay.domain.service;
 
 import dev.langchain4j.service.UserMessage;
 import dev.langchain4j.service.V;
