@@ -8,19 +8,22 @@ import org.mapstruct.Mapping;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {GenreMapper.class, StatusMapper.class})
 public interface MovieMapper {
 
     @Mapping(source = "titulo", target = "title")
     @Mapping(source ="duracion"  , target ="duration" )
-    @Mapping(source ="genero"  , target ="genre" )
+    @Mapping(source ="genero"  , target ="genre", qualifiedByName = "stringToGenre")
     @Mapping(source ="fechaEstreno" , target ="releaseDate" )
     @Mapping(source ="clasificacion", target = "rating")
+    @Mapping(source ="estado", target = "status", qualifiedByName = "stringToStatus")
     MovieDto toDto (MovieEntity entity);
 
     List<MovieDto> toDto (Iterable<MovieEntity> entities);
 
     @InheritInverseConfiguration
+    @Mapping(source ="genre"  , target ="genero", qualifiedByName = "genreToString")
+    @Mapping(source = "status", target = "estado", qualifiedByName = "statusToString")
     MovieEntity toEntity(MovieDto dto);
 
 }
